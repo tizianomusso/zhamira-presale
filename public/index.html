@@ -335,7 +335,7 @@
 
   // ══════ WEBHOOK CONFIG ══════
   // Replace this with your N8N webhook URL
-  const WEBHOOK_URL = '__N8N_WEBHOOK_URL__';
+  const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyXVhkDmfQehLriiDamVFD07H3YUVmFo9xWK6VAxbbryruNXrkokBum0VMpCtcEskg69w/exec';
 
   async function handleSubmit() {
     const email = document.getElementById('email').value.trim();
@@ -357,6 +357,7 @@
     try {
       await fetch(WEBHOOK_URL, {
         method: 'POST',
+        mode: 'no-cors',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           email: email,
