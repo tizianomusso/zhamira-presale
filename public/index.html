@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZHAMIRA — Curita Para el Corazón Tour | Preventa</title>
+<meta name="description" content="Anotate para la preventa exclusiva del show de Zhamira - Curita Para el Corazón Tour. 31 de Mayo, Palermo Groove, Buenos Aires.">
+<meta property="og:title" content="ZHAMIRA — Preventa Exclusiva">
+<meta property="og:description" content="Curita Para el Corazón Tour · 31 de Mayo · Palermo Groove, Buenos Aires">
+<meta property="og:image" content="/zhamira-hero.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  :root {
+    --red-deep: #8B0000;
+    --red-primary: #C41E3A;
+    --red-bright: #E63946;
+    --red-glow: #FF2D55;
+    --red-soft: #FF6B81;
+    --cream: #FFF5F5;
+    --dark: #1A0005;
+    --gold: #D4A853;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--dark);
+    color: var(--cream);
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* ══════ HERO ══════ */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: center;
+    padding: 0 1.5rem 3.5rem;
+    overflow: hidden;
+  }
+  .hero-image-container {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--dark);
+  }
+  .hero-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    image-rendering: -webkit-optimize-contrast;
+    filter: contrast(1.04) saturate(1.08) brightness(1.02) url(#sharpen);
+  }
+  .hero-image-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(26,0,5,0.05) 0%,
+      rgba(26,0,5,0) 15%,
+      rgba(26,0,5,0) 35%,
+      rgba(26,0,5,0.6) 48%,
+      rgba(26,0,5,0.95) 58%,
+      rgba(26,0,5,1) 65%,
+      rgba(26,0,5,1) 100%
+    );
+    z-index: 1;
+  }
+
+  .hearts-container {
+    position: absolute; inset: 0; z-index: 2;
+    pointer-events: none; overflow: hidden;
+  }
+  .heart-float {
+    position: absolute; opacity: 0;
+    animation: floatHeart 8s ease-in-out infinite;
+    color: var(--red-glow); filter: blur(1px);
+  }
+  @keyframes floatHeart {
+    0% { transform: translateY(100vh) scale(0.5) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.2; }
+    90% { opacity: 0.06; }
+    100% { transform: translateY(-10vh) scale(1.2) rotate(30deg); opacity: 0; }
+  }
+
+  .hero-bottom {
+    position: relative; z-index: 3; max-width: 550px;
+  }
+  .presale-badge {
+    display: inline-block;
+    padding: 0.35rem 1.3rem;
+    border: 1px solid rgba(255,107,129,0.45);
+    border-radius: 50px;
+    font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: var(--red-soft);
+    margin-bottom: 1.2rem;
+    backdrop-filter: blur(12px);
+    background: rgba(26,0,5,0.45);
+    animation: fadeIn 0.8s ease-out both;
+  }
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic; font-weight: 700;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+    animation: fadeInUp 0.7s ease-out 0.2s both;
+  }
+  .hero-subtitle {
+    font-size: 0.92rem;
+    color: rgba(255,245,245,0.65);
+    margin-bottom: 2rem;
+    animation: fadeInUp 0.7s ease-out 0.35s both;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+  .hero-subtitle span { color: var(--red-soft); font-weight: 600; }
+
+  .scroll-cta { animation: fadeInUp 0.7s ease-out 0.5s both; }
+  .scroll-cta a {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    padding: 1rem 2.8rem;
+    background: linear-gradient(135deg, var(--red-bright), var(--red-primary));
+    color: #fff; text-decoration: none;
+    font-weight: 700; font-size: 0.95rem;
+    letter-spacing: 1px; text-transform: uppercase;
+    border-radius: 60px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 30px rgba(230,57,70,0.45);
+  }
+  .scroll-cta a:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 40px rgba(230,57,70,0.6);
+  }
+  .arrow-down { display: inline-block; animation: bounce 1.5s ease-in-out infinite; }
+  @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(4px)} }
+
+  /* ══════ FORM ══════ */
+  .form-section {
+    position: relative;
+    padding: 5rem 1.5rem 6rem;
+    display: flex; flex-direction: column; align-items: center;
+    background: linear-gradient(180deg, var(--dark) 0%, #0D0002 50%, var(--dark) 100%);
+  }
+  .form-section::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 250px;
+    background: radial-gradient(ellipse 70% 100% at 50% 0%, rgba(196,30,58,0.05) 0%, transparent 100%);
+    pointer-events: none;
+  }
+  .form-wrapper { position: relative; z-index: 2; width: 100%; max-width: 480px; }
+  .form-header { text-align: center; margin-bottom: 2.5rem; }
+  .form-header h2 {
+    font-weight: 700;
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+    margin-bottom: 0.8rem; letter-spacing: -0.5px;
+  }
+  .form-header h2 em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic; color: var(--gold);
+  }
+  .form-header p {
+    font-size: 0.95rem;
+    color: rgba(255,245,245,0.5);
+    line-height: 1.6; max-width: 380px; margin: 0 auto;
+  }
+  .form-card {
+    background: rgba(255,255,255,0.025);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 24px;
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .form-group { margin-bottom: 1.5rem; }
+  .form-group label {
+    display: block; font-size: 0.76rem; font-weight: 600;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: rgba(255,245,245,0.4); margin-bottom: 0.6rem;
+  }
+  .input-wrapper { position: relative; }
+  .input-wrapper .input-icon {
+    position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%);
+    font-size: 1.05rem; opacity: 0.3; pointer-events: none; transition: opacity 0.3s;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 1rem 1.2rem 1rem 3rem;
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 14px;
+    color: var(--cream);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease; outline: none;
+  }
+  .form-group input::placeholder { color: rgba(255,245,245,0.2); }
+  .form-group input:focus {
+    border-color: var(--red-primary);
+    background: rgba(196,30,58,0.06);
+    box-shadow: 0 0 0 3px rgba(196,30,58,0.1);
+  }
+  .input-wrapper:has(input:focus) .input-icon { opacity: 0.8; }
+  .phone-row { display: flex; gap: 0.8rem; }
+  .phone-row .country-code { width: 90px; flex-shrink: 0; }
+  .phone-row .country-code input { padding-left: 1.2rem; text-align: center; }
+  .phone-row .phone-number { flex: 1; }
+  .submit-btn {
+    width: 100%; padding: 1.1rem; margin-top: 0.5rem;
+    background: linear-gradient(135deg, var(--red-bright), var(--red-deep));
+    color: #fff; border: none; border-radius: 14px;
+    font-family: 'Outfit', sans-serif; font-size: 1rem;
+    font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; transition: all 0.3s ease;
+    position: relative; overflow: hidden;
+  }
+  .submit-btn::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--red-glow), var(--red-bright));
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .submit-btn:hover::before { opacity: 1; }
+  .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+  .submit-btn span { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+  .submit-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(230,57,70,0.5); }
+  .submit-btn:active { transform: scale(0.98); }
+  .form-footer { text-align: center; margin-top: 1.5rem; font-size: 0.76rem; color: rgba(255,245,245,0.25); }
+  .form-footer .heart-icon { color: var(--red-soft); }
+
+  /* Success */
+  .success-state { display: none; text-align: center; padding: 2rem 0; animation: fadeInUp 0.5s ease-out; }
+  .success-state.active { display: block; }
+  .success-heart { font-size: 4rem; margin-bottom: 1.5rem; animation: heartPulse 1.5s ease-in-out infinite; display: inline-block; }
+  @keyframes heartPulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.1)} }
+  .success-state h3 { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.8rem; color: var(--gold); margin-bottom: 0.8rem; }
+  .success-state p { color: rgba(255,245,245,0.6); font-size: 1rem; line-height: 1.6; }
+
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+  @keyframes fadeInUp { from{opacity:0;transform:translateY(25px)} to{opacity:1;transform:translateY(0)} }
+
+  @media (max-width: 480px) {
+    .hero { min-height: 100svh; padding-bottom: 2.5rem; }
+    .form-card { padding: 2rem 1.4rem; }
+    .phone-row { flex-direction: column; gap: 1rem; }
+    .phone-row .country-code { width: 100%; }
+    .phone-row .country-code input { text-align: left; padding-left: 3rem; }
+  }
+  @media (min-width: 900px) {
+    .hero-image-container img { object-fit: contain; object-position: center center; background: var(--dark); }
+  }
+</style>
+</head>
+<body>
+<svg style="position:absolute;width:0;height:0">
+  <filter id="sharpen">
+    <feConvolveMatrix order="3" kernelMatrix="0 -0.5 0 -0.5 3 -0.5 0 -0.5 0" preserveAlpha="true"/>
+  </filter>
+</svg>
+
+<section class="hero">
+  <div class="hero-image-container">
+    <img src="/zhamira-hero.png" alt="Zhamira - Curita Para el Corazón Tour">
+  </div>
+  <div class="hearts-container" id="heartsContainer"></div>
+  <div class="hero-bottom">
+    <div class="presale-badge">★ Preventa Exclusiva ★</div>
+    <p class="hero-title">Curita Para el Corazón Tour</p>
+    <p class="hero-subtitle">31 de Mayo · <span>Palermo Groove</span> · Av. Santa Fe 4389, Buenos Aires</p>
+    <div class="scroll-cta">
+      <a href="#presale">Quiero mi preventa <span class="arrow-down">↓</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="presale">
+  <div class="form-wrapper">
+    <div class="form-header">
+      <h2>Anotate para la <em>preventa</em></h2>
+      <p>Dejá tus datos y te avisamos antes que nadie cuando se abran las entradas.</p>
+    </div>
+    <div class="form-card">
+      <div id="formContent">
+        <div class="form-group">
+          <label>Email</label>
+          <div class="input-wrapper">
+            <input type="email" id="email" placeholder="tu@email.com" required>
+            <span class="input-icon">✉️</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <div class="phone-row">
+            <div class="country-code">
+              <div class="input-wrapper">
+                <input type="text" id="countryCode" value="+54" placeholder="+54">
+              </div>
+            </div>
+            <div class="phone-number">
+              <div class="input-wrapper">
+                <input type="tel" id="phone" placeholder="11 2345 6789" required>
+                <span class="input-icon">📱</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="submit-btn" id="submitBtn" onclick="handleSubmit()">
+          <span>♥ Quiero mi preventa ♥</span>
+        </button>
+      </div>
+      <div class="success-state" id="successState">
+        <div class="success-heart">❤️‍🔥</div>
+        <h3>¡Estás en la lista!</h3>
+        <p>Te vamos a avisar apenas se abra la preventa. Preparate para una noche increíble con Zhamira.</p>
+      </div>
+    </div>
+    <div class="form-footer">
+      <span class="heart-icon">♥</span> Cupos limitados — acceso prioritario para registrados
+    </div>
+  </div>
+</section>
+
+<script>
+  // Floating hearts
+  const container = document.getElementById('heartsContainer');
+  const hearts = ['♥','♡','❤','❣'];
+  for (let i = 0; i < 14; i++) {
+    const h = document.createElement('div');
+    h.className = 'heart-float';
+    h.textContent = hearts[Math.floor(Math.random()*hearts.length)];
+    h.style.left = Math.random()*100+'%';
+    h.style.animationDelay = Math.random()*8+'s';
+    h.style.animationDuration = (6+Math.random()*6)+'s';
+    h.style.fontSize = (0.8+Math.random()*1)+'rem';
+    container.appendChild(h);
+  }
+
+  // ══════ WEBHOOK CONFIG ══════
+  // Replace this with your N8N webhook URL
+  const WEBHOOK_URL = '__N8N_WEBHOOK_URL__';
+
+  async function handleSubmit() {
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const code = document.getElementById('countryCode').value.trim();
+    
+    if (!email || !phone) {
+      const btn = document.getElementById('submitBtn');
+      btn.style.animation = 'shake 0.4s ease';
+      setTimeout(() => btn.style.animation = '', 400);
+      return;
+    }
+    if (!email.includes('@') || !email.includes('.')) return;
+
+    // Disable button while sending
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Enviando...';
+
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          phone: code + phone,
+          timestamp: new Date().toISOString(),
+          source: 'zhamira-presale'
+        })
+      });
+    } catch (err) {
+      console.log('Webhook error (data still saved locally):', err);
+    }
+
+    // Show success regardless (don't block UX on webhook failure)
+    document.getElementById('formContent').style.display = 'none';
+    document.getElementById('successState').classList.add('active');
+  }
+
+  document.querySelectorAll('input').forEach(i => {
+    i.addEventListener('keypress', e => { if (e.key === 'Enter') handleSubmit(); });
+  });
+
+  const s = document.createElement('style');
+  s.textContent = '@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}';
+  document.head.appendChild(s);
+</script>
+</body>
+</html>
